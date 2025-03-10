@@ -8,7 +8,7 @@ import hashlib
 
 def generate():
     # Fill this with as many prompts as you need
-    test_prompts = ["Write a poem."]
+    test_prompts = ["Write a poem.", "Write a haiku."]
     # If you want the script to run for an entire day free of charge, be sure to implement a sleep-schedule so that you aren't taxing Gemini's servers and, in addition, so that you honor Gemini's 1500 (free) request daily limit
     rest_range = [random.randint(58, 120) for _ in range(1501)]
 
