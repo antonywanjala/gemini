@@ -56,13 +56,14 @@ def generate():
             file.write(str(response.text))
             file.close()
 
-        total_pause_time = rest_range[rest_range_index]
-        print(f"Sleep time: {total_pause_time}")
-        print(f"Completed interval number {prompt_counter}")
-        print(f"Response: {response.text}")
-
-        time.sleep(total_pause_time)
-        prompt_counter += 1
+        if len(test_prompts) > 1:
+            total_pause_time = rest_range[rest_range_index]
+            print(f"Sleep time: {total_pause_time}")
+            print(f"Completed interval number {prompt_counter}")
+            print(f"Response: {response.text}")
+    
+            time.sleep(total_pause_time)
+            prompt_counter += 1
 
 
 def main(argv):
